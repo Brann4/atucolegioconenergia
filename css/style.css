@@ -33,9 +33,9 @@
 :root {
      --primary-color: hsl(21, 97%, 52%);
      --secondary-color: #eea949;
-     --thirth-color: hsl(140, 59%, 36%);
+     --thirth-color: #26924a;
      --hover-thirth-color: hsl(140, 59%, 25%);
-     --light-primary-color: hsl(21, 97%, 75%);
+     --light-primary-color: #fdad81;
      --light-secondary-color: #fff6d6;
 
      --text-color: #1F1F1F;
@@ -284,7 +284,6 @@ button {
      align-items: center;
 }
 
-
 .read_more {
      position: relative;
      font-size: var(--text-size-navbar);
@@ -301,7 +300,7 @@ button {
      border-radius: 15px;
 }
 
-.read_more:hover{
+.read_more:hover {
      background: var(--hover-thirth-color);
      color: whitesmoke;
      transform: translateY(-5px);
@@ -328,7 +327,7 @@ button {
 
 /*---------------------------- circle pointer ----------------------------*/
 
-.cursor-circle{     
+.cursor-circle {
      position: absolute;
      width: 40px;
      height: 40px;
@@ -380,7 +379,7 @@ html.sr .load-hidden {
      background: white;
      height: 107px;
      padding: 27px 30px;
-     position: fixed;
+     position: absolute;
      z-index: 999;
      box-shadow: 0 0 4px rgba(14, 55, 63, .15);
 }
@@ -417,7 +416,7 @@ html.sr .load-hidden {
      border: white solid 1px;
 }
 
-.navigation.navbar-dark .navbar-nav .nav-link.focused{
+.navigation.navbar-dark .navbar-nav .nav-link.focused {
      color: white;
      background-color: var(--primary-color);
 }
@@ -436,7 +435,7 @@ html.sr .load-hidden {
 }
 
 .slider_main {
-     padding-top: 6%;
+     padding-top: 10%;
 }
 
 .relative {
@@ -520,7 +519,7 @@ html.sr .load-hidden {
 }
 
 .banner_img {
-     padding: 0 5rem 5rem 5rem;
+     padding: 0 5% 5% 5%;
 }
 
 .banner_img figure {
@@ -547,10 +546,11 @@ html.sr .load-hidden {
      position: absolute;
      bottom: 0;
      left: 0;
+     top: 0;
+     right: 0;
      width: 100%;
-     height: 100%;
+     height: 100.1%;
      z-index: -1;
-     
 }
 
 .class .titlepage p {
@@ -571,7 +571,7 @@ html.sr .load-hidden {
      cursor: pointer;
 }
 
-.class_box:hover{
+.class_box:hover {
      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -642,37 +642,37 @@ html.sr .load-hidden {
      padding-bottom: 29px;
 }
 
-.about_img  {
+.about_img {
      margin: 0;
 }
 
-.about_img  img {
+.about_img img {
      width: 80vh;
 }
 
-.about h4{
+.about h4 {
      font-size: 30px;
      margin-bottom: 1rem;
 }
 
-.about .markers{
+.about .markers {
      font-size: medium;
      margin-left: 1rem;
      color: var(--text-color);
-     line-height:1rem;
+     line-height: 1rem;
 }
 
-.about .markers li{
+.about .markers li {
      font-size: 25px;
-     color:var(--primary-color);
+     color: var(--primary-color);
 }
 
-.about .markers li p{
+.about .markers li p {
      margin-top: 1rem;
 }
 
 .about .link_btn {
-    justify-content: left;
+     justify-content: left;
 }
 
 /** end about section **/
@@ -681,22 +681,21 @@ html.sr .load-hidden {
 /** activities section **/
 .activities {
      background: var(--light-secondary-color);
-     position: relative; 
-     padding-top: 5rem;
+     position: relative;
+     padding: 7rem 0;
 }
 
 .activities::before {
      content: "";
      background-image: url('../images/backgrounds/wave-bottom.svg');
      background-size: contain;
-     background-position:top;
+     background-position: top;
      background-repeat: no-repeat;
      position: absolute;
      bottom: 0;
      left: 0;
      width: 100%;
-     height: 100%;
-     z-index: 0;
+     height: 100.1%;
 }
 
 
@@ -719,9 +718,6 @@ html.sr .load-hidden {
      padding-bottom: 29px;
 }
 
-.activities_img {
-     padding-left: 40px;
-}
 
 .activities_img img {
      width: 100vh;
@@ -733,14 +729,14 @@ html.sr .load-hidden {
 .activities .link_btn {
      justify-content: left;
      padding-bottom: 1rem;
-     width: 340px;
- }
 
- 
-.activities .link_btn:last-child a{
+}
+
+
+.activities .link_btn:last-child a {
      background: var(--primary-color);
      border: 2px solid var(--primary-color);
- }
+}
 
 /** end activities section **/
 
@@ -748,16 +744,31 @@ html.sr .load-hidden {
 
 /**   gifts section**/
 
-.gifts{
+.gifts {
+     position: relative;
      background: var(--light-secondary-color);
-
 }
 
-.gifts h2 strong{
+.gifts::before {
+     content: "";
+     background-image: url('../images/backgrounds/wave-footer.svg');
+     background-size: contain;
+     background-position: bottom;
+     background-repeat: no-repeat;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     top: 0;
+     width: 100.1%;
+     height: 100.4%;
+}
+
+.gifts h2 strong {
      color: var(--secondary-color);
 }
 
-.gifts .class_box{
+.gifts .class_box {
      min-height: 670px;
      max-height: 750px;
 }
@@ -765,10 +776,12 @@ html.sr .load-hidden {
 .gifts .class_box .gifts__info .gifts-description {
      padding: .5rem 0;
 }
-.gifts .class_box .gifts__info .gifts-description strong{
+
+.gifts .class_box .gifts__info .gifts-description strong {
      font-size: 20px;
      color: var(--thirth-color);
 }
+
 .gifts .class_box .gifts__info .gifts-description p {
      font-size: 15px;
      color: var(--light-primary-color);
@@ -781,8 +794,8 @@ html.sr .load-hidden {
 /** footer **/
 
 .footer {
-     padding-top: 120px;
-     background: #fff;
+     padding-top: 30px;
+     background: var(--thirth-color);
      text-align: center;
 }
 
@@ -800,7 +813,7 @@ html.sr .load-hidden {
      font-weight: bold;
      font-size: 30px;
      line-height: 24px;
-     color: #2c2c2b;
+     color: var(--light-secondary-color);
      padding-bottom: 15px;
 }
 
@@ -809,7 +822,6 @@ html.sr .load-hidden {
      font-size: 14px;
      text-align: left;
      line-height: 35px;
-     display: inline-block;
 }
 
 .infoma ul li img {
@@ -821,7 +833,7 @@ ul.conta {
 }
 
 ul.conta li {
-     color: #434342;
+     color: var(--text-title-color);
      text-align: left;
      padding-bottom: 22px;
      font-size: 17px;
@@ -829,6 +841,7 @@ ul.conta li {
      display: flex;
      align-items: center;
 }
+
 
 ul.conta li:last-child {
      padding-right: 0;
@@ -842,75 +855,31 @@ ul.conta li i {
 }
 
 ul.conta li a {
-     color: #434342;
-}
-
-
-/*newsletter*/
-
-.form_subscri {
-     margin-top: 10px;
-}
-
-.newsl {
-     margin-bottom: 20px;
-     width: 100%;
-     height: 48px;
-     background: #fff;
-     color: #9e9c9c;
-     font-size: 16px;
-     font-weight: normal;
-     border: inherit;
-     box-shadow: 0 0 5px 0px #dddddd4d;
-     padding: 0 15px;
-}
-
-.subsci_btn {
-     font-size: 17px;
-     transition: ease-in all 0.5s;
-     background-color: var(--primary-color);
-     text-transform: uppercase;
-     color: #fff;
-     max-width: 220px;
-     width: 100%;
-     display: block;
-     font-weight: 500;
-     height: 48px;
-     float: right;
-     line-height: 48px;
-     border-radius: 10px;
-}
-
-.subsci_btn:hover {
-     background-color: #3e0bce;
-     transition: ease-in all 0.5s;
-     color: #fff;
+     color: var(--text-title-color);
 }
 
 
 /* end newsletter*/
 
-ul.fullink li {
-     float: left;
-     padding: 0px 27px;
+ul.fullink {
+     display: flex;
+     flex-direction: column;
+     padding-bottom: 20px;
 }
 
 ul.fullink li a {
-     color: #2b2b2b;
+     color: var(--text-title-color);
+     padding-bottom: 22px;
      font-size: 17px;
+     line-height: 18px;
+     padding-left: 30px;
 }
 
 ul.fullink li a:hover {
-     color: #5326d3;
+     color: var(--primary-color);
 }
 
-ul.fullink li:nth-child(1) {
-     padding-left: 0;
-}
 
-ul.fullink li:nth-child(5) {
-     padding-right: 0;
-}
 
 ul.social_icon {
      float: left;
@@ -940,14 +909,14 @@ ul.social_icon li a i {
 
 ul.social_icon li a:hover {
      color: #fff;
-     background: #5326d3;
+     background: var(--primary-color);
      transition: ease-in all 0.5s;
 }
 
 .copyright {
-     margin-top: 90px;
+     margin-top: 50px;
      padding-bottom: 25px;
-     background: var(--primary-color)
+     background: var(--thirth-color);
 }
 
 .copyright p {
@@ -971,23 +940,6 @@ ul.social_icon li a:hover {
 
 /** end footer **/
 
-
-/**  inner page css **/
-
-.inner_page .header {
-     box-shadow: 0 0 10px rgb(240, 57, 15);
-     margin-bottom: 10px;
-     position: inherit;
-}
-
-.inner_page .about {
-     margin-top: 80px;
-}
-
-.inner_page .class {
-     padding-top: 80px;
-     padding-bottom: 0;
-}
 
 
 /** contact **/
@@ -1075,3 +1027,17 @@ ul.social_icon li a:hover {
 
 
 /** end contact **/
+
+/* material didactico section*/
+
+.material_didactico {
+     padding: 20vh 0;
+     background: var(--light-secondary-color);
+}
+
+.material_didactico .class_box {
+     min-height: 670px;
+     max-height: 750px;
+}
+
+/* end material didactico section*/
