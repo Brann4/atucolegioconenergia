@@ -277,6 +277,9 @@ button {
      align-items: center;
      flex-wrap: wrap;
 }
+.pr-2{
+     padding-right: 1.5rem;
+}
 
 .link_btn {
      display: flex;
@@ -519,7 +522,7 @@ html.sr .load-hidden {
 }
 
 .banner_img {
-     padding: 0 5% 5% 5%;
+     padding: 5% 5% 5% 5%;
 }
 
 .banner_img figure {
